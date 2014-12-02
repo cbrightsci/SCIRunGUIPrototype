@@ -51,6 +51,7 @@ SET(Interface_Modules_Fields_FORMS
   MapFieldDataOntoNodes.ui
   ClipFieldByFunction.ui
   ConvertFieldBasis.ui
+  EditMeshBoundingBox.ui
 )
 
 SET(Interface_Modules_Fields_HEADERS
@@ -77,6 +78,7 @@ SET(Interface_Modules_Fields_HEADERS
   MapFieldDataOntoNodesDialog.h
   ClipFieldByFunctionDialog.h
   ConvertFieldBasisDialog.h
+  EditMeshBoundingBoxDialog.h
   share.h
 )
 
@@ -104,6 +106,7 @@ SET(Interface_Modules_Fields_SOURCES
   MapFieldDataOntoElemsDialog.cc
   MapFieldDataOntoNodesDialog.cc
   ClipFieldByFunctionDialog.cc
+  EditMeshBoundingBoxDialog.cc
 )
 
 QT4_WRAP_UI(Interface_Modules_Fields_FORMS_HEADERS ${Interface_Modules_Fields_FORMS})
