@@ -58,6 +58,10 @@ ViewSceneDialog::ViewSceneDialog(const std::string& name, ModuleStateHandle stat
   QGLFormat fmt;
   fmt.setAlpha(true);
   fmt.setRgba(true);
+  fmt.setDepth(true);
+  fmt.setDoubleBuffer(true);
+  fmt.setDepthBufferSize(24);
+
   mGLWidget = new GLWidget(new QtGLContext(fmt));
 
   if (mGLWidget->isValid())

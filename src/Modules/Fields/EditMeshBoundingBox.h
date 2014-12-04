@@ -36,20 +36,52 @@ namespace SCIRun {
 namespace Modules {
 namespace Fields {
   
-  class SCISHARE EditMeshBoundingBox : public SCIRun::Dataflow::Networks::Module,
+  class SCISHARE EditMeshBoundingBoxModule : public SCIRun::Dataflow::Networks::Module,
     public Has1InputPort<FieldPortTag>,
     public Has3OutputPorts<FieldPortTag, GeometryPortTag, MatrixPortTag>
   {
   public:
-    EditMeshBoundingBox();
+    EditMeshBoundingBoxModule();
     virtual void execute();
     virtual void setStateDefaults();
+
+	//Input Field Attributes
+	static Core::Algorithms::AlgorithmParameterName InputCenterX;
+	static Core::Algorithms::AlgorithmParameterName InputCenterY;
+	static Core::Algorithms::AlgorithmParameterName InputCenterZ;
+	static Core::Algorithms::AlgorithmParameterName InputSizeX;
+	static Core::Algorithms::AlgorithmParameterName InputSizeY;
+	static Core::Algorithms::AlgorithmParameterName InputSizeZ;
+	//Output Field Atributes
+	static Core::Algorithms::AlgorithmParameterName UseOutputCenter;
+	static Core::Algorithms::AlgorithmParameterName UseOutputSize;
+	static Core::Algorithms::AlgorithmParameterName OutputCenterX;
+	static Core::Algorithms::AlgorithmParameterName OutputCenterY;
+	static Core::Algorithms::AlgorithmParameterName OutputCenterZ;
+	static Core::Algorithms::AlgorithmParameterName OutputSizeX;
+	static Core::Algorithms::AlgorithmParameterName OutputSizeY;
+	static Core::Algorithms::AlgorithmParameterName OutputSizeZ;
+	//Widget Scale/Mode
+	static Core::Algorithms::AlgorithmParameterName DoubleScaleUp;
+	static Core::Algorithms::AlgorithmParameterName ScaleUp;
+	static Core::Algorithms::AlgorithmParameterName ScaleDown;
+	static Core::Algorithms::AlgorithmParameterName DoubleScaleDown;
+	static Core::Algorithms::AlgorithmParameterName NoTranslation;
+	static Core::Algorithms::AlgorithmParameterName XYZTranslation;
+	static Core::Algorithms::AlgorithmParameterName RDITranslation;
+	static Core::Algorithms::AlgorithmParameterName RestrictX;
+	static Core::Algorithms::AlgorithmParameterName RestrictY;
+	static Core::Algorithms::AlgorithmParameterName RestrictZ;
+	static Core::Algorithms::AlgorithmParameterName RestrictR;
+	static Core::Algorithms::AlgorithmParameterName RestrictD;
+	static Core::Algorithms::AlgorithmParameterName RestrictI;
+
     INPUT_PORT(0, InputField, LegacyField);
     OUTPUT_PORT(0, OutputField, LegacyField);
     OUTPUT_PORT(1, Transformation_Widget, GeometryObject);
-    OUTPUT_PORT(2, Transformation_Matrix, Matrix);
+    OUTPUT_PORT(2, Transformation_Matrix, Matrix);	
 	
-	  static const Dataflow::Networks::ModuleLookupInfo staticInfo_;
+	static const Dataflow::Networks::ModuleLookupInfo staticInfo_;
   };
 }}}
 

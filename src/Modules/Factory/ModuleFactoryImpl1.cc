@@ -158,7 +158,7 @@ void ModuleDescriptionLookup::addEssentialModules()
   addModuleDesc<MapFieldDataFromSourceToDestination>("Real ported module", "...");
   addModuleDesc<GetMatrixSlice>("New module based on GetRowOrColumnFromMatrix", "...");
   addModuleDesc<SetFieldDataToConstantValue>("Real ported module", "...");
-  addModuleDesc<EditMeshBoundingBox>("Rewrite", "...");
+  addModuleDesc<EditMeshBoundingBoxModule>("Rewrite", "...");
   //addModuleDesc<ImportDatatypesFromMatlab>("Improved version of Matlab importer", "work in progress"); //not ready yet
 
 

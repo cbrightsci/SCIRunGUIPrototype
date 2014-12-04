@@ -31,10 +31,11 @@
 using namespace SCIRun::Modules::Fields;
 using namespace SCIRun::Core::Datatypes;
 using namespace SCIRun::Dataflow::Networks;
+using namespace SCIRun::Core::Algorithms;
 
-const ModuleLookupInfo EditMeshBoundingBox::staticInfo_("EditMeshBoundingBox", "ChangeMesh", "SCIRun");
+const ModuleLookupInfo EditMeshBoundingBoxModule::staticInfo_("EditMeshBoundingBox", "ChangeMesh", "SCIRun");
 
-EditMeshBoundingBox::EditMeshBoundingBox() : Module(staticInfo_)
+EditMeshBoundingBoxModule::EditMeshBoundingBoxModule() : Module(staticInfo_)
 {
   INITIALIZE_PORT(InputField);
   INITIALIZE_PORT(OutputField);
@@ -42,12 +43,42 @@ EditMeshBoundingBox::EditMeshBoundingBox() : Module(staticInfo_)
   INITIALIZE_PORT(Transformation_Matrix);
 }
 
-void EditMeshBoundingBox::setStateDefaults()
+void EditMeshBoundingBoxModule::setStateDefaults()
 {
   //TODO
 }
 
-void EditMeshBoundingBox::execute()
+void EditMeshBoundingBoxModule::execute()
 {
   //TODO
 }
+
+AlgorithmParameterName EditMeshBoundingBoxModule::InputCenterX("InputCenterX");
+AlgorithmParameterName EditMeshBoundingBoxModule::InputCenterY("InputCenterY");
+AlgorithmParameterName EditMeshBoundingBoxModule::InputCenterZ("InputCenterZ");
+AlgorithmParameterName EditMeshBoundingBoxModule::InputSizeX("InputSizeX");
+AlgorithmParameterName EditMeshBoundingBoxModule::InputSizeY("InputSizeY");
+AlgorithmParameterName EditMeshBoundingBoxModule::InputSizeZ("InputSizeZ");
+//Output Field Atributes
+AlgorithmParameterName EditMeshBoundingBoxModule::UseOutputCenter("UseOutputCenter");
+AlgorithmParameterName EditMeshBoundingBoxModule::UseOutputSize("UseOutputSize");
+AlgorithmParameterName EditMeshBoundingBoxModule::OutputCenterX("OutputCenterX");
+AlgorithmParameterName EditMeshBoundingBoxModule::OutputCenterY("OutputCenterY");
+AlgorithmParameterName EditMeshBoundingBoxModule::OutputCenterZ("OutputCenterZ");
+AlgorithmParameterName EditMeshBoundingBoxModule::OutputSizeX("OutputSizeX");
+AlgorithmParameterName EditMeshBoundingBoxModule::OutputSizeY("OutputSizeY");
+AlgorithmParameterName EditMeshBoundingBoxModule::OutputSizeZ("OutputSizeZ");
+//Widget Scale/Mode
+AlgorithmParameterName EditMeshBoundingBoxModule::DoubleScaleUp("DoubleScaleUp");
+AlgorithmParameterName EditMeshBoundingBoxModule::ScaleUp("ScaleUp");
+AlgorithmParameterName EditMeshBoundingBoxModule::ScaleDown("ScaleDown");
+AlgorithmParameterName EditMeshBoundingBoxModule::DoubleScaleDown("DoubleScaleDown");
+AlgorithmParameterName EditMeshBoundingBoxModule::NoTranslation("NoTranslation");
+AlgorithmParameterName EditMeshBoundingBoxModule::XYZTranslation("XYZTranslation");
+AlgorithmParameterName EditMeshBoundingBoxModule::RDITranslation("RDITranslation");
+AlgorithmParameterName EditMeshBoundingBoxModule::RestrictX("RestrictX");
+AlgorithmParameterName EditMeshBoundingBoxModule::RestrictY("RestrictY");
+AlgorithmParameterName EditMeshBoundingBoxModule::RestrictZ("RestrictZ");
+AlgorithmParameterName EditMeshBoundingBoxModule::RestrictR("RestrictR");
+AlgorithmParameterName EditMeshBoundingBoxModule::RestrictD("RestrictD");
+AlgorithmParameterName EditMeshBoundingBoxModule::RestrictI("RestrictI");
