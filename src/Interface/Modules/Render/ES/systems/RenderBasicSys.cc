@@ -169,14 +169,19 @@ public:
     // Apply matrix uniforms (if any).
     for (const ren::MatUniform& unif : matUniforms) {unif.applyUniform();}
 
-    geom.front().attribs.bind();
+	geom.front().attribs.bind();
+
+	GL(glDisable(GL_CULL_FACE));
 
     // Disable zwrite if we are rendering a transparent object.
     if (srstate.front().state.get(RenderState::USE_TRANSPARENCY))
     {
       GL(glDepthMask(GL_FALSE));
-      GL(glDisable(GL_CULL_FACE));
     }
+	else
+	{
+		GL(glDepthMask(GL_TRUE));
+	}
 
     if (rlist.size() > 0)
     {
