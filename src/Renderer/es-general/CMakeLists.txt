@@ -46,7 +46,7 @@ CPM_ForceOnlyOneModuleVersion()
 SET(Renderer_ESgeneral_SRCS
   Registration.cpp
   systems/ClickBox2DSys.cpp
-  systems/ConstantRotation.cpp
+  systems/ConstantRotationSys.cpp
   util/Math.cpp
 )
 
@@ -55,7 +55,7 @@ SET(Renderer_ESgeneral_HEADERS
   Registration.hpp
   comp/CameraSelect.hpp
   comp/ClickBox2D.hpp
-  comp/ConstsnRotation.hpp
+  comp/ConstantRotation.hpp
   comp/StaticCamera.hpp
   comp/StaticGlobalTime.hpp
   comp/StaticKeyboardInput.hpp
@@ -66,7 +66,7 @@ SET(Renderer_ESgeneral_HEADERS
   comp/StaticScreenDims.hpp
   comp/Transform.hpp
   systems/ClickBox2DSys.hpp
-  systems/ConstantRotation.hpp
+  systems/ConstantRotationSys.hpp
   util/Math.hpp
 )
 

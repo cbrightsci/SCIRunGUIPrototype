@@ -33,7 +33,7 @@ SET(Renderer_ESfs_SRCS
   FilesystemDummy.cpp
   FilesystemSync.cpp
   Registration.cpp
-  emscipten/FilesystemEm.cpp
+  emscripten/FilesystemEm.cpp
 )
 
 SET(Renderer_ESfs_HEADERS
@@ -41,7 +41,7 @@ SET(Renderer_ESfs_HEADERS
   FilesystemDummy.hpp
   FilesystemSync.hpp
   Registration.hpp
-  emscipten/FilesystemEm.hpp
+  emscripten/FilesystemEm.hpp
   fscomp/StaticFS.hpp
 )
 

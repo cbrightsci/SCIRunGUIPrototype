@@ -29,11 +29,11 @@
 cmake_minimum_required(VERSION 2.8.0 FATAL_ERROR)
 
 SET(Renderer_Glshaders_SRCS
-  GLPlatform.cpp  
+  GLShader.cpp  
 )
 
 SET(Renderer_Glshaders_HEADERS
-  GLPlatform.hpp    
+  GLShader.hpp    
 )
 
 SCIRUN_ADD_LIBRARY(Renderer_Glshaders

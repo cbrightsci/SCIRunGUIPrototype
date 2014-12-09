@@ -70,7 +70,7 @@ SET(Renderer_ESrender_SRCS
   systems/RenderFontSys.cpp
   systems/RenderSimpleGeomSys.cpp
   systems/UtilViewPosAlignSys.cpp
-  Systems/debug/RenderClickBox2DSys.cpp
+  systems/debug/RenderClickBox2DSys.cpp
   util/Camera.cpp
   util/DebugRender.cpp
   util/Lines.cpp
@@ -120,7 +120,7 @@ SET(Renderer_ESrender_HEADERS
   systems/RenderFontSys.hpp
   systems/RenderSimpleGeomSys.hpp
   systems/UtilViewPosAlignSys.hpp
-  Systems/debug/RenderClickBox2DSys.hpp
+  systems/debug/RenderClickBox2DSys.hpp
   util/Camera.hpp
   util/DebugRender.hpp
   util/Lines.hpp
